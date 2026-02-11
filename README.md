@@ -2,7 +2,7 @@
 
 A premium, state-of-the-art Progressive Web App (PWA) designed to provide the most accurate and relaxing experience for your Ramzan journey. Featuring high-precision location detection, strict Fiqh-based calculations, and a majestic Islamic aesthetic.
 
-![App Preview](public/vite.svg) *Replace with a real screenshot before public release*
+![App Preview](public/ramzan-app.png)
 
 ## ✨ Key Features
 
