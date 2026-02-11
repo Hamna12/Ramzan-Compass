@@ -1,0 +1,87 @@
+:root {
+  --font-main: 'Outfit', 'Inter', system-ui, sans-serif;
+
+  /* Premium HDR Gradients */
+  --bg-day: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  --bg-aftari: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  --bg-sehri: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+
+  /* Thematic Accent Colors */
+  --accent-gold: #fbbf24;
+  --accent-emerald: #10b981;
+
+  --color-text-light: #ffffff;
+  --color-text-dark: #1a1a1a;
+
+  --glass-bg: rgba(255, 255, 255, 0.08);
+  --glass-border: 1px solid rgba(255, 255, 255, 0.15);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: white;
+  background-color: #0a0a0a;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-height: 100vh;
+  font-family: var(--font-main);
+  overflow: hidden;
+  background: var(--bg-day);
+}
+
+/* Islamic Geometric Pattern Overlay */
+.pattern-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l15 30-15 30L15 30z' fill-opacity='0.03' fill='%23ffffff' fill-rule='evenodd'/%3E%3C/svg%3E");
+  opacity: 0.4;
+  pointer-events: none;
+  z-index: 0;
+}
+
+#root {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  border-radius: 24px;
+  padding: 2.5rem;
+  transition: transform 0.3s ease;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #ffffff 0%, #f3f4f6 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
