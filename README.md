@@ -28,7 +28,7 @@ A premium, state-of-the-art Progressive Web App (PWA) designed to provide the mo
 ### Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/ramzan-Compass.git
+   git clone https://github.com/yourusername/Ramzan-Compass.git
    cd ramzan-Compass
    ```
 
@@ -65,7 +65,7 @@ MIT License - Created for the benefit of the community.
 ### Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/ramzan-zenith.git
+   git clone https://github.com/yourusername/Ramzan-Compass.git
    cd ramzan-zenith
    ```
 
