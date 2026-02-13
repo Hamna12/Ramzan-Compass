@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 # 🌙 Ramzan Compass (1447)
 
 A premium, state-of-the-art Progressive Web App (PWA) designed to provide the most accurate and relaxing experience for your Ramzan journey. Featuring high-precision location detection, strict Fiqh-based calculations, and a majestic Islamic aesthetic.
 
 ![App Preview](public/vite.svg) *Replace with a real screenshot before public release*
+=======
+# 🌙 Ramzan Zenith (1447)
+
+A premium, state-of-the-art Progressive Web App (PWA) designed to provide the most accurate and relaxing experience for your Ramzan journey. Featuring high-precision location detection, strict Fiqh-based calculations, and a majestic Islamic aesthetic.
+
+![App Preview](public/ramzan-app.png)
+>>>>>>> 6efef890d09285b1635acdf87f691f40caf5a56e
 
 ## ✨ Key Features
 
@@ -19,6 +27,7 @@ A premium, state-of-the-art Progressive Web App (PWA) designed to provide the mo
 ### Prerequisites
 - [Node.js](https://nodejs.org/) (Latest LTS recommended)
 - [npm](https://www.npmjs.com/)
+<<<<<<< HEAD
 
 ### Installation
 1. Clone the repository:
@@ -55,3 +64,42 @@ This project is optimized for **Vercel** or **Netlify**. Simply connect your Git
 
 ## 📜 License
 MIT License - Created for the benefit of the community.
+=======
+
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/ramzan-zenith.git
+   cd ramzan-zenith
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Run locally:
+   ```bash
+   npm run dev
+   ```
+
+### 📦 Production Build
+To create a optimized production build:
+```bash
+npm run build
+```
+The output will be in the `dist/` folder, ready for deployment.
+
+## 🛠️ Tech Stack
+- **Frontend**: React.js + Vite
+- **Calculations**: [Adhan.js](https://github.com/batoulapps/adhan-js)
+- **Icons**: Lucide React
+- **Styling**: Vanilla CSS (Custom Glassmorphism)
+
+## 🌐 Deployment
+This project is optimized for **Vercel** or **Netlify**. Simply connect your GitHub repository and it will auto-deploy.
+
+## 📜 License
+MIT License - Created for the benefit of the community.
+
+>>>>>>> 6efef890d09285b1635acdf87f691f40caf5a56e
