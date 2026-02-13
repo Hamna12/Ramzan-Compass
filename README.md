@@ -19,7 +19,6 @@ A premium, state-of-the-art Progressive Web App (PWA) designed to provide the mo
 ### Prerequisites
 - [Node.js](https://nodejs.org/) (Latest LTS recommended)
 - [npm](https://www.npmjs.com/)
-<<<<<<< HEAD
 
 ### Installation
 1. Clone the repository:
@@ -94,4 +93,3 @@ This project is optimized for **Vercel** or **Netlify**. Simply connect your Git
 ## 📜 License
 MIT License - Created for the benefit of the community.
 
->>>>>>> 6efef890d09285b1635acdf87f691f40caf5a56e
