@@ -1,7 +1,3 @@
-# 🌙 Ramzan Compass (1447)
-
-A premium, state-of-the-art Progressive Web App (PWA) designed to provide the most accurate and relaxing experience for your Ramzan journey. Featuring high-precision location detection, strict Fiqh-based calculations, and a majestic Islamic aesthetic.
-
 # 🌙 Ramzan Zenith (1447)
 
 A premium, state-of-the-art Progressive Web App (PWA) designed to provide the most accurate and relaxing experience for your Ramzan journey. Featuring high-precision location detection, strict Fiqh-based calculations, and a majestic Islamic aesthetic.
