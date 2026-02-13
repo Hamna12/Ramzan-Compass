@@ -1,9 +1,9 @@
 import React from 'react';
-import { MapPin, Moon } from 'lucide-react';
+import { MapPin, Moon, Volume2, VolumeX } from 'lucide-react';
 import { useCountdown } from '../hooks/useCountdown';
 import './CountdownHero.css';
 
-const CountdownHero = ({ nextEvent, locationName, fiqh }) => {
+const CountdownHero = ({ nextEvent, locationName, fiqh, isAudioUnlocked }) => {
     const timeLeft = useCountdown(nextEvent?.time);
 
     if (!nextEvent) {
@@ -23,7 +23,7 @@ const CountdownHero = ({ nextEvent, locationName, fiqh }) => {
             {/* Header Info */}
             <div className="hero-header">
                 <h1 className="app-title">
-                    Ramzan 1447
+                    Ramzan Compass
                 </h1>
                 <div className="info-row">
                     <div className="info-item">
@@ -59,6 +59,17 @@ const CountdownHero = ({ nextEvent, locationName, fiqh }) => {
 
                 <div className="target-time">
                     Target: {nextTargetTime}
+                </div>
+
+                <div className="audio-status" title={isAudioUnlocked ? "Sound Enabled" : "Sound Muted - Click anywhere to enable"}>
+                    {isAudioUnlocked ? (
+                        <Volume2 size={16} className="text-white opacity-80" />
+                    ) : (
+                        <div className="muted-indicator">
+                            <VolumeX size={16} className="text-white opacity-60" />
+                            <span className="muted-text">Sound Muted</span>
+                        </div>
+                    )}
                 </div>
             </div>
         </div>

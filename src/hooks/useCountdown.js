@@ -10,7 +10,7 @@ export const useCountdown = (targetDate) => {
         const calculateTimeLeft = () => {
             const now = new Date();
             if (now >= targetDate) {
-                setTimeLeft(null); // Time's up
+                setTimeLeft({ hours: 0, minutes: 0, seconds: 0 }); // Time's up
                 return;
             }
 

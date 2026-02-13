@@ -8,22 +8,25 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'masked-icon.svg'],
+      includeAssets: ['favicon.svg'],
       manifest: {
-        name: 'Ramzan 1447',
-        short_name: 'Ramzan 1447',
-        description: 'Ramzan countdown with accurate prayer times',
-        theme_color: '#ffffff',
+        name: 'Ramzan Compass',
+        short_name: 'Ramzan Compass',
+        description: 'Premium Ramzan countdown with accurate prayer times',
+        theme_color: '#0a0a0a',
+        background_color: '#0a0a0a',
         icons: [
           {
-            src: 'vite.svg',
+            src: 'favicon.svg',
             sizes: '192x192',
-            type: 'image/svg+xml'
+            type: 'image/svg+xml',
+            purpose: 'any maskable'
           },
           {
-            src: 'vite.svg',
+            src: 'favicon.svg',
             sizes: '512x512',
-            type: 'image/svg+xml'
+            type: 'image/svg+xml',
+            purpose: 'any maskable'
           }
         ]
       }

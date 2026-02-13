@@ -4,7 +4,7 @@ import { usePrayerTimes } from '../hooks/usePrayerTimes';
 import RamzanCalendar from './RamzanCalendar';
 import './InfoOverlay.css';
 
-const InfoOverlay = ({ isOpen, onClose, prayerTimes, settings, onSettingsChange, activeCoords }) => {
+const InfoOverlay = ({ isOpen, onClose, prayerTimes, settings, onSettingsChange, activeCoords, isAudioUnlocked, setIsAudioUnlocked, onTestAlert }) => {
     const [draftSettings, setDraftSettings] = useState(settings);
     const [activeTab, setActiveTab] = useState('times'); // 'times' or 'calendar'
 
@@ -156,11 +156,12 @@ const InfoOverlay = ({ isOpen, onClose, prayerTimes, settings, onSettingsChange,
                                         const btn = document.getElementById('test-audio-btn');
                                         if (btn) btn.innerText = "🔊 Playing...";
 
-                                        const audio = new Audio('/notification.mp3');
-                                        const FALLBACK_URL = 'https://assets.mixkit.co/active_storage/sfx/2869/2869-preview.mp3';
+                                        const audio = new Audio('https://www.islamcan.com/audio/adhan/azan21.mp3');
+                                        const FALLBACK_URL = 'https://www.islamcan.com/audio/adhan/azan21.mp3';
 
                                         const tryPlay = (player, isFallback = false) => {
                                             player.play().then(() => {
+                                                if (setIsAudioUnlocked) setIsAudioUnlocked(true);
                                                 player.onended = () => {
                                                     if (btn) btn.innerText = "🎵 Test Alert Sound";
                                                 };
@@ -184,6 +185,28 @@ const InfoOverlay = ({ isOpen, onClose, prayerTimes, settings, onSettingsChange,
                                 </button>
                                 <p style={{ fontSize: '0.75rem', color: '#888', marginTop: '0.4rem' }}>
                                     (Click to hear the sound played at Sehri/Iftar)
+                                </p>
+
+                                <button
+                                    className="setting-btn"
+                                    style={{
+                                        width: '100%',
+                                        marginTop: '0.8rem',
+                                        fontSize: '0.9rem',
+                                        background: '#f8fafc',
+                                        border: '1px solid #e2e8f0',
+                                        color: '#64748b',
+                                        fontWeight: 600
+                                    }}
+                                    onClick={() => {
+                                        onTestAlert();
+                                        onClose();
+                                    }}
+                                >
+                                    🕒 Test 5-Sec Countdown
+                                </button>
+                                <p style={{ fontSize: '0.75rem', color: '#888', marginTop: '0.4rem' }}>
+                                    (Simulates a real 0:00:00 end with sound & notification)
                                 </p>
                             </div>
 
