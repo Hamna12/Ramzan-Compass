@@ -135,7 +135,7 @@ function App() {
       if (diff <= 0 && diff > -2000 && lastPlayedRef.current !== effectiveNextEvent.time.getTime()) {
         lastPlayedRef.current = effectiveNextEvent.time.getTime();
 
-        const audio = new Audio('https://www.islamcan.com/audio/adhan/azan21.mp3');
+        const audio = new Audio('/notification.mp3');
         const FALLBACK_URL = 'https://www.islamcan.com/audio/adhan/azan21.mp3';
 
         // Sound Trigger

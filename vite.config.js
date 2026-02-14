@@ -8,7 +8,7 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.svg'],
+      includeAssets: ['favicon.svg', 'notification.mp3', 'ramzan-app.png'],
       manifest: {
         name: 'Ramzan Compass',
         short_name: 'Ramzan Compass',
