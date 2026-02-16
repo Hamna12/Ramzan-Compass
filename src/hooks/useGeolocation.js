@@ -17,7 +17,14 @@ export const useGeolocation = () => {
             return;
         }
 
+        const options = {
+            enableHighAccuracy: true,
+            timeout: 15000,
+            maximumAge: 300000 // 5 minutes cache
+        };
+
         const success = (position) => {
+            console.log("Geolocation success:", position.coords.latitude, position.coords.longitude);
             setLocation({
                 coords: {
                     latitude: position.coords.latitude,
@@ -29,18 +36,28 @@ export const useGeolocation = () => {
         };
 
         const error = (err) => {
-            setLocation({
-                coords: null,
-                error: "Unable to retrieve your location. Please ensure location services are enabled.",
-                loading: false,
-            });
+            console.warn(`Geolocation error (${err.code}): ${err.message}. Retrying with low accuracy...`);
+
+            // Fallback to low accuracy if high accuracy fails
+            if (options.enableHighAccuracy) {
+                navigator.geolocation.getCurrentPosition(success, (secondErr) => {
+                    console.error("Geolocation failed completely:", secondErr);
+                    setLocation({
+                        coords: null,
+                        error: "Unable to retrieve your location. Please ensure location services are enabled.",
+                        loading: false,
+                    });
+                }, { ...options, enableHighAccuracy: false, timeout: 10000 });
+            } else {
+                setLocation({
+                    coords: null,
+                    error: "Unable to retrieve your location.",
+                    loading: false,
+                });
+            }
         };
 
-        navigator.geolocation.getCurrentPosition(success, error, {
-            enableHighAccuracy: true,
-            timeout: 10000,
-            maximumAge: 0
-        });
+        navigator.geolocation.getCurrentPosition(success, error, options);
     }, []);
 
     return location;
